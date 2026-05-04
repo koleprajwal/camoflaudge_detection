@@ -1,6 +1,25 @@
-# Camouflage Detection
+# Wildlife Camouflage Detection
 
-A deep learning project for detecting camouflaged objects using U-Net architecture. This project identifies objects that blend into their surroundings using semantic segmentation techniques.
+**Short Description:**
+This Wildlife Camouflage Detection model uses **U-Net semantic segmentation** to detect hidden animals in images. It analyzes features like **image textures, color patterns, spatial information, and edge details** to predict precise **segmentation masks** showing camouflaged wildlife locations. The system uses **Streamlit** for demonstration, providing an intuitive interface for real-time predictions on uploaded images.
+
+## Overview
+
+Wildlife Camouflage Detection is a deep learning project designed to identify and segment animals that are camouflaged in their natural habitats. Using advanced computer vision techniques, this model reveals wildlife concealed through adaptive coloration and background matching. The project leverages the **U-Net architecture with ResNet18 backbone** for pixel-level semantic segmentation, enabling precise localization of hidden animals in complex natural scenes.
+
+### Key Features:
+- 🎯 **Pixel-Level Accuracy**: Generates precise segmentation masks highlighting exact animal locations
+- 🔬 **Advanced Architecture**: U-Net with ResNet18 backbone for superior feature extraction
+- 📊 **Large-Scale Dataset**: Trained on COD10K-v3 with thousands of camouflaged object examples
+- ⚡ **Real-Time Inference**: Fast predictions suitable for interactive applications
+- 🌐 **Web Interface**: Streamlit-based UI for easy image upload and visualization
+- 🎨 **Visual Overlay**: Displays detected camouflage regions overlaid on original images
+
+### Applications:
+- Wildlife monitoring and conservation
+- Ecological research and biodiversity assessment
+- Surveillance and security systems
+- Object detection in complex backgrounds
 
 ## Dataset
 
@@ -94,10 +113,61 @@ Launches the web interface for interactive predictions.
 
 ## Model Architecture
 
-The project uses a **U-Net** convolutional neural network for semantic segmentation:
-- Encoder-decoder architecture
-- Skip connections for preserving spatial information
-- Suitable for object detection in complex backgrounds
+### U-Net with ResNet18 Backbone
+
+The project employs a **U-Net convolutional neural network** enhanced with a **ResNet18 encoder** for semantic segmentation:
+
+**Architecture Components:**
+- **Encoder**: Pre-trained ResNet18 backbone extracts multi-scale image features
+- **Bottleneck**: Compressed feature representation capturing high-level semantic information
+- **Decoder**: Progressive upsampling layers reconstruct the image to original resolution
+- **Skip Connections**: Direct links from encoder to decoder preserve spatial details and boundary information
+- **Output**: Binary segmentation mask (1 = camouflaged animal, 0 = background)
+
+**Why U-Net?**
+- ✅ Excellent for precise boundary detection
+- ✅ Skip connections prevent loss of fine spatial details
+- ✅ Data-efficient architecture suitable for limited datasets
+- ✅ Fast inference for real-time applications
+- ✅ Industry standard for semantic segmentation tasks
+
+## Results & Performance
+
+The trained model achieves:
+- High accuracy in detecting camouflaged animals across diverse environments
+- Precise pixel-level segmentation with clear boundary delineation
+- Fast inference times suitable for real-time applications
+- Robust performance on unseen test images from the COD10K-v3 dataset
+
+## Contributing
+
+Contributions are welcome! To contribute:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Citation
+
+If you use this project in your research, please cite the COD10K dataset:
+
+```bibtex
+@article{fan2021camouflaged,
+  title={Camouflaged Object Detection},
+  author={Fan, Deng-Ping and others},
+  journal={IEEE CVPR},
+  year={2021}
+}
+```
+
+## Contact & Support
+
+For questions or issues, please open an issue on GitHub or contact the project maintainers.
 
 ## Requirements
 
